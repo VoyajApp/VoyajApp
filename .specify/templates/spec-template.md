@@ -95,6 +95,12 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### API Contract *(mandatory when API changes)*
+
+- **AC-001**: OpenAPI (or equivalent) MUST be updated to reflect new/changed endpoints
+- **AC-002**: Breaking changes MUST be versioned and documented
+- **AC-003**: Client types/validation MUST be updated to match the contract
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]

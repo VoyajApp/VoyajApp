@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- Stack boundary: `web/` for Next.js only, `api/` for Django only
+- Contract-first API: OpenAPI updated and used for client types/validation
+- Security/privacy: secrets in env, PII not logged, CSRF for state changes
+- Critical path tests: API integration tests + frontend critical flow coverage
+- Operational readiness: migrations, health checks, structured logs
 
 ## Project Structure
 
