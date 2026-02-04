@@ -95,6 +95,12 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### UI/UX Requirements *(mandatory for web UI changes)*
+
+- **UX-001**: UI MUST use ShadCN components unless an exception is documented
+- **UX-002**: UI MUST be accessible (keyboard navigation, focus states, semantics)
+- **UX-003**: UI MUST be responsive across common breakpoints
+
 ### API Contract *(mandatory when API changes)*
 
 - **AC-001**: OpenAPI (or equivalent) MUST be updated to reflect new/changed endpoints

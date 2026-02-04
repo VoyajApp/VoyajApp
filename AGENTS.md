@@ -13,10 +13,20 @@ Welcome, agent! This guide will help you and future agents leverage [ShadCN UI](
 ---
 
 ### 2. **Design Principles**
-- **Consistency:** Use ShadCN components for all UI elements to maintain a unified look.
-- **Accessibility:** Always use accessible components and test with screen readers.
-- **Responsiveness:** Ensure designs look great on all devices using ShadCN's responsive utilities.
-- **Minimalism:** Favor clean layouts, ample whitespace, and clear typography.
+- **Consistency (Required):** Use ShadCN components by default. Exceptions MUST be
+  documented and aligned with the design system.
+- **Accessibility (Required):** UIs MUST support keyboard navigation, visible
+  focus states, and semantic structure. Test with screen readers when possible.
+- **Responsiveness (Required):** UIs MUST work across common breakpoints.
+- **Minimalism (Required):** Favor clean layouts, ample whitespace, and clear
+  typography.
+
+---
+
+### 2.1 **Constitution Compliance (Required)**
+- After completing any task(s), agents MUST review changes against the
+  constitution and update them until fully compliant.
+- Work that does not pass this review is subject to being discarded.
 
 ---
 
@@ -24,6 +34,8 @@ Welcome, agent! This guide will help you and future agents leverage [ShadCN UI](
 - Import components from ShadCN as needed (e.g., `import { Button } from "@/components/ui/button"`).
 - Customize via props and Tailwind classes for colors, spacing, and states.
 - Use the [theme generator](https://ui.shadcn.com/themes) for custom color palettes.
+- When building custom UI, ensure it matches the design system and meets
+  accessibility and responsive requirements.
 
 ---
 
@@ -33,6 +45,8 @@ Welcome, agent! This guide will help you and future agents leverage [ShadCN UI](
 - **Spacing:** Use Tailwind spacing utilities to create balanced layouts.
 - **Animations:** Add subtle transitions for interactive elements (e.g., hover, focus).
 - **Cards & Modals:** Use ShadCN's card and modal components for content grouping and dialogs.
+- **Review Checklist (Required):** Confirm keyboard navigation, focus visibility,
+  semantic landmarks, and layout integrity at small/medium/large breakpoints.
 
 ---
 

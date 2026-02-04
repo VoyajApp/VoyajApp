@@ -36,6 +36,8 @@
 - Security/privacy: secrets in env, PII not logged, CSRF for state changes
 - Critical path tests: API integration tests + frontend critical flow coverage
 - Operational readiness: migrations, health checks, structured logs
+- UI consistency: ShadCN components, accessibility, responsive layouts
+- Post-task compliance: review completed changes for constitution alignment
 
 ## Project Structure
 

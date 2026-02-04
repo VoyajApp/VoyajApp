@@ -1,8 +1,8 @@
 <!--
 Sync Impact Report
-- Version: N/A → 1.0.0
-- Modified principles: N/A (initial fill)
-- Added sections: Architecture & Stack Constraints; Delivery Workflow & Quality Gates
+- Version: 1.1.0 → 1.2.0
+- Modified principles: N/A
+- Added sections: N/A
 - Removed sections: N/A
 - Templates requiring updates:
 	- ✅ .specify/templates/plan-template.md
@@ -50,6 +50,13 @@ schema changes MUST be done via migrations and be reversible. Performance
 budgets MUST be respected (Core Web Vitals for web; p95 latency targets for API
 as defined in specs). Rationale: safe deployment and reliable operation.
 
+### VI. UI Consistency, Accessibility, and Responsiveness
+All new or modified web UI MUST use ShadCN components unless a documented
+exception is approved. UI MUST meet accessibility basics (keyboard navigation,
+focus states, semantic structure) and be responsive across common breakpoints.
+Visual design MUST favor minimalism, clear typography, and consistent spacing.
+Rationale: consistent, inclusive, and maintainable user experiences.
+
 ## Architecture & Stack Constraints
 
 - Frontend: Next.js App Router in `web/`, TypeScript, Tailwind, ShadCN UI.
@@ -61,6 +68,8 @@ as defined in specs). Rationale: safe deployment and reliable operation.
 	differences; no hard-coded endpoints in the frontend.
 - Data: all persistent data MUST live in PostgreSQL and be accessed via Django
 	ORM in the backend.
+- UI: ShadCN components are the default; custom UI MUST match the design system
+	and meet accessibility and responsive requirements.
 
 ## Delivery Workflow & Quality Gates
 
@@ -69,6 +78,9 @@ as defined in specs). Rationale: safe deployment and reliable operation.
 - Backward-incompatible API changes MUST include a migration plan and version
 	bump in the contract.
 - Release notes MUST call out user-visible changes and risk areas.
+- Web UI changes MUST include an accessibility and responsive layout review.
+- After completing any task(s), changes MUST be reviewed against this
+	constitution and updated until fully compliant.
 
 ## Governance
 
@@ -80,4 +92,4 @@ as defined in specs). Rationale: safe deployment and reliable operation.
 - Compliance is reviewed during planning; every plan MUST complete a
 	Constitution Check and document any justified exceptions.
 
-**Version**: 1.0.0 | **Ratified**: TODO(RATIFICATION_DATE): original ratification date unknown | **Last Amended**: 2026-02-04
+**Version**: 1.2.0 | **Ratified**: TODO(RATIFICATION_DATE): original ratification date unknown | **Last Amended**: 2026-02-04
