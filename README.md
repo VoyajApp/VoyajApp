@@ -83,3 +83,6 @@ Most routes currently contain scaffolds/placeholders ready to be wired to real d
 
 ## Notes
 - The web app is the primary focus at this stage; backend/APIs and data persistence are to be integrated next according to the open issues.
+- Scaffold/UX-first rule: planning and implementation MUST align with
+  `docs/page-scaffold.md` before introducing new routes or changing page flows.
+  Any scaffold/UX deviation requires explicit approval and a separate update task.

@@ -65,6 +65,25 @@
 
 [Add more user stories as needed, each with an assigned priority]
 
+## Scaffold & UX Alignment *(mandatory for web UI features)*
+
+<!--
+  ACTION REQUIRED FOR WEB/UI FEATURES:
+  - Map each user story to existing scaffolded routes/pages first.
+  - If a story requires changing route inventory, page purpose, or cross-page flow,
+    mark it as a deviation and do NOT proceed without explicit user approval.
+-->
+
+### Route Mapping
+
+- **US1**: [Map to existing route(s), e.g., `/adventure/dashboard` -> `/adventure/details`]
+- **US2**: [Map to existing route(s)]
+- **US3**: [Map to existing route(s)]
+
+### Planned Deviations (must be explicitly approved)
+
+- [None OR list each proposed route/flow/page-purpose change and approval reference]
+
 ### Edge Cases
 
 <!--
@@ -94,18 +113,6 @@
 
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
-
-### UI/UX Requirements *(mandatory for web UI changes)*
-
-- **UX-001**: UI MUST use ShadCN components unless an exception is documented
-- **UX-002**: UI MUST be accessible (keyboard navigation, focus states, semantics)
-- **UX-003**: UI MUST be responsive across common breakpoints
-
-### API Contract *(mandatory when API changes)*
-
-- **AC-001**: OpenAPI (or equivalent) MUST be updated to reflect new/changed endpoints
-- **AC-002**: Breaking changes MUST be versioned and documented
-- **AC-003**: Client types/validation MUST be updated to match the contract
 
 ### Key Entities *(include if feature involves data)*
 

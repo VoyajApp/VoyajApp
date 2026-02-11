@@ -3,7 +3,7 @@
 **Branch**: `[###-feature-name]` | **Date**: [DATE] | **Spec**: [link]
 **Input**: Feature specification from `/specs/[###-feature-name]/spec.md`
 
-**Note**: This template is filled in by the `/speckit.plan` command. See `.specify/templates/commands/plan.md` for the execution workflow.
+**Note**: This template is filled in by the `/speckit.plan` command.
 
 ## Summary
 
@@ -31,13 +31,16 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- Stack boundary: `web/` for Next.js only, `api/` for Django only
-- Contract-first API: OpenAPI updated and used for client types/validation
-- Security/privacy: secrets in env, PII not logged, CSRF for state changes
-- Critical path tests: API integration tests + frontend critical flow coverage
-- Operational readiness: migrations, health checks, structured logs
-- UI consistency: ShadCN components, accessibility, responsive layouts
-- Post-task compliance: review completed changes for constitution alignment
+- [ ] Stack boundary respected (`web/` frontend, `api/` backend, HTTP-only integration)
+- [ ] API contract impact identified; OpenAPI/schema updates planned if needed
+- [ ] Security and privacy controls identified for auth/data handling changes
+- [ ] Critical-path test strategy defined for each planned user story
+- [ ] Observability/migration impact assessed (logging, health checks, migrations)
+- [ ] UI uses ShadCN by default; a11y + responsive checks are planned
+- [ ] **Scaffold/UX alignment check completed** against current docs
+      (currently `docs/page-scaffold.md`)
+- [ ] Any route/flow/page-purpose deviation is explicitly approved and tracked
+      in Complexity Tracking
 
 ## Project Structure
 

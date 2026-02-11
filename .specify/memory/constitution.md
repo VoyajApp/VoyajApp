@@ -1,7 +1,9 @@
 <!--
 Sync Impact Report
-- Version: 1.1.0 → 1.2.0
-- Modified principles: N/A
+- Version: 1.2.0 → 1.3.0
+- Modified principles:
+	- VI. UI Consistency, Accessibility, and Responsiveness
+		→ VI. UI Consistency, Accessibility, Responsiveness, and Scaffold Compliance
 - Added sections: N/A
 - Removed sections: N/A
 - Templates requiring updates:
@@ -9,6 +11,9 @@ Sync Impact Report
 	- ✅ .specify/templates/spec-template.md
 	- ✅ .specify/templates/tasks-template.md
 	- ⚠ .specify/templates/commands/*.md (directory not present)
+- Runtime guidance requiring updates:
+	- ✅ AGENTS.md
+	- ✅ README.md
 - Deferred placeholders/TODOs:
 	- TODO(RATIFICATION_DATE): original ratification date unknown
 -->
@@ -50,11 +55,16 @@ schema changes MUST be done via migrations and be reversible. Performance
 budgets MUST be respected (Core Web Vitals for web; p95 latency targets for API
 as defined in specs). Rationale: safe deployment and reliable operation.
 
-### VI. UI Consistency, Accessibility, and Responsiveness
+### VI. UI Consistency, Accessibility, Responsiveness, and Scaffold Compliance
 All new or modified web UI MUST use ShadCN components unless a documented
 exception is approved. UI MUST meet accessibility basics (keyboard navigation,
 focus states, semantic structure) and be responsive across common breakpoints.
 Visual design MUST favor minimalism, clear typography, and consistent spacing.
+Planning and implementation MUST align to the currently documented page scaffold
+and UX docs (currently `docs/page-scaffold.md`) before introducing new flows.
+Agents MUST NOT add routes, remove routes, repurpose scaffolded pages, or change
+cross-page flow definitions without explicit user approval in a separate
+scaffold/UX update task.
 Rationale: consistent, inclusive, and maintainable user experiences.
 
 ## Architecture & Stack Constraints
@@ -70,6 +80,8 @@ Rationale: consistent, inclusive, and maintainable user experiences.
 	ORM in the backend.
 - UI: ShadCN components are the default; custom UI MUST match the design system
 	and meet accessibility and responsive requirements.
+- Scaffold and UX documentation are authoritative for route inventory and page
+	flow definitions until explicitly amended.
 
 ## Delivery Workflow & Quality Gates
 
@@ -79,6 +91,8 @@ Rationale: consistent, inclusive, and maintainable user experiences.
 	bump in the contract.
 - Release notes MUST call out user-visible changes and risk areas.
 - Web UI changes MUST include an accessibility and responsive layout review.
+- Feature plans MUST include a route-flow alignment check against scaffold/UX
+	docs and document any approved exceptions.
 - After completing any task(s), changes MUST be reviewed against this
 	constitution and updated until fully compliant.
 
@@ -89,7 +103,9 @@ Rationale: consistent, inclusive, and maintainable user experiences.
 	plus updates to dependent templates and guidance files.
 - Versioning follows semantic rules: MAJOR for incompatible governance changes,
 	MINOR for new or expanded rules, PATCH for clarifications.
-- Compliance is reviewed during planning; every plan MUST complete a
-	Constitution Check and document any justified exceptions.
+- Compliance is reviewed during planning and implementation; every plan MUST
+	complete a Constitution Check and document any justified exceptions.
+- Any scaffold/UX-doc deviation MUST be approved before implementation and
+	recorded in both the feature plan and PR description.
 
-**Version**: 1.2.0 | **Ratified**: TODO(RATIFICATION_DATE): original ratification date unknown | **Last Amended**: 2026-02-04
+**Version**: 1.3.0 | **Ratified**: TODO(RATIFICATION_DATE): original ratification date unknown | **Last Amended**: 2026-02-11
