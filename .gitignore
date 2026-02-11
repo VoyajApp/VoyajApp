@@ -1,0 +1,19 @@
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+*.log
+
+# Environment files
+.env*
+
+# Editors/IDEs
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/mcp.json
+
+# Local tooling caches
+.codex/
+

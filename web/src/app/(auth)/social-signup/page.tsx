@@ -35,7 +35,7 @@ export default function SocialSignUpPage() {
       // TODO: Implement social authentication logic with role
       await new Promise(resolve => setTimeout(resolve, 1000));
       // Redirect to activation or dashboard
-    } catch (err) {
+    } catch {
       setError(`Failed to sign up with ${provider}. Please try again.`);
     } finally {
       setIsLoading(null);

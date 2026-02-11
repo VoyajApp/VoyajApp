@@ -50,6 +50,8 @@ Gate assessment notes:
   section presence, keyboard focus, and responsive integrity.
 - No migrations/health/logging changes are required for this UI-only scope.
 - No scaffold deviations are planned.
+- Scaffold compliance was revalidated after implementation on 2026-02-11 with
+  route/section/link checks and desktop/mobile Playwright screenshots.
 
 ## Project Structure
 

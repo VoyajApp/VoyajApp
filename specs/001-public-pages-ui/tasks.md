@@ -22,9 +22,9 @@ description: "Task list for Public Page Placeholder Refresh"
 
 **Purpose**: Confirm baseline and gather reusable UI patterns before page work starts.
 
-- [ ] T001 Review scaffold requirements in `/workspaces/VoyajApp/docs/page-scaffold.md` and capture required sections/links in `/workspaces/VoyajApp/specs/001-public-pages-ui/quickstart.md`
-- [ ] T002 Review auth-page visual baseline in `/workspaces/VoyajApp/web/src/components/auth-layout.tsx` and `/workspaces/VoyajApp/web/src/app/(auth)/signin/page.tsx`
-- [ ] T003 [P] Review public route placeholders in `/workspaces/VoyajApp/web/src/app/page.tsx`, `/workspaces/VoyajApp/web/src/app/about/page.tsx`, and `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
+- [X] T001 Review scaffold requirements in `/workspaces/VoyajApp/docs/page-scaffold.md` and capture required sections/links in `/workspaces/VoyajApp/specs/001-public-pages-ui/quickstart.md`
+- [X] T002 Review auth-page visual baseline in `/workspaces/VoyajApp/web/src/components/auth-layout.tsx` and `/workspaces/VoyajApp/web/src/app/(auth)/signin/page.tsx`
+- [X] T003 [P] Review public route placeholders in `/workspaces/VoyajApp/web/src/app/page.tsx`, `/workspaces/VoyajApp/web/src/app/about/page.tsx`, and `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
 
 ---
 
@@ -34,11 +34,11 @@ description: "Task list for Public Page Placeholder Refresh"
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T004 Create shared public-page section wrappers and heading patterns in `/workspaces/VoyajApp/web/src/components/public/public-section.tsx`
-- [ ] T005 [P] Create shared public navigation cluster component for public/auth links in `/workspaces/VoyajApp/web/src/components/public/public-nav-links.tsx`
-- [ ] T006 [P] Add public-page placeholder content constants aligned to data model entities in `/workspaces/VoyajApp/web/src/lib/public-page-content.ts`
-- [ ] T007 Add scaffold guardrail notes and route-purpose checklist comments to `/workspaces/VoyajApp/web/src/lib/public-page-content.ts`
-- [ ] T008 Run lint baseline before story implementation from `/workspaces/VoyajApp/web` using `npm run lint`
+- [X] T004 Create shared public-page section wrappers and heading patterns in `/workspaces/VoyajApp/web/src/components/public/public-section.tsx`
+- [X] T005 [P] Create shared public navigation cluster component for public/auth links in `/workspaces/VoyajApp/web/src/components/public/public-nav-links.tsx`
+- [X] T006 [P] Add public-page placeholder content constants aligned to data model entities in `/workspaces/VoyajApp/web/src/lib/public-page-content.ts`
+- [X] T007 Add scaffold guardrail notes and route-purpose checklist comments to `/workspaces/VoyajApp/web/src/lib/public-page-content.ts`
+- [X] T008 Run lint baseline before story implementation from `/workspaces/VoyajApp/web` using `npm run lint`
 
 **Checkpoint**: Foundation ready; user story implementation can proceed independently.
 
@@ -52,11 +52,11 @@ description: "Task list for Public Page Placeholder Refresh"
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Implement public landing page structure using shared components in `/workspaces/VoyajApp/web/src/app/page.tsx`
-- [ ] T010 [US1] Add hero and featured placeholder blocks wired from `/workspaces/VoyajApp/web/src/lib/public-page-content.ts` in `/workspaces/VoyajApp/web/src/app/page.tsx`
-- [ ] T011 [US1] Add categories, testimonials, and footer placeholder blocks in `/workspaces/VoyajApp/web/src/app/page.tsx`
-- [ ] T012 [US1] Add visible primary/secondary navigation links to `/about`, `/privacy`, `/signup`, and `/signin` in `/workspaces/VoyajApp/web/src/app/page.tsx`
-- [ ] T013 [US1] Validate heading hierarchy and landmark semantics for homepage sections in `/workspaces/VoyajApp/web/src/app/page.tsx`
+- [X] T009 [US1] Implement public landing page structure using shared components in `/workspaces/VoyajApp/web/src/app/page.tsx`
+- [X] T010 [US1] Add hero and featured placeholder blocks wired from `/workspaces/VoyajApp/web/src/lib/public-page-content.ts` in `/workspaces/VoyajApp/web/src/app/page.tsx`
+- [X] T011 [US1] Add categories, testimonials, and footer placeholder blocks in `/workspaces/VoyajApp/web/src/app/page.tsx`
+- [X] T012 [US1] Add visible primary/secondary navigation links to `/about`, `/privacy`, `/signup`, and `/signin` in `/workspaces/VoyajApp/web/src/app/page.tsx`
+- [X] T013 [US1] Validate heading hierarchy and landmark semantics for homepage sections in `/workspaces/VoyajApp/web/src/app/page.tsx`
 
 **Checkpoint**: User Story 1 should be fully functional and testable on its own.
 
@@ -70,11 +70,11 @@ description: "Task list for Public Page Placeholder Refresh"
 
 ### Implementation for User Story 2
 
-- [ ] T014 [P] [US2] Implement structured About placeholders (team + mission) in `/workspaces/VoyajApp/web/src/app/about/page.tsx`
-- [ ] T015 [P] [US2] Implement structured Privacy placeholders (legal section blocks) in `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
-- [ ] T016 [US2] Add clear back-to-home navigation treatment in `/workspaces/VoyajApp/web/src/app/about/page.tsx`
-- [ ] T017 [US2] Add clear back-to-home navigation treatment in `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
-- [ ] T018 [US2] Align typography and spacing rhythm between `/about` and `/privacy` in `/workspaces/VoyajApp/web/src/app/about/page.tsx` and `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
+- [X] T014 [P] [US2] Implement structured About placeholders (team + mission) in `/workspaces/VoyajApp/web/src/app/about/page.tsx`
+- [X] T015 [P] [US2] Implement structured Privacy placeholders (legal section blocks) in `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
+- [X] T016 [US2] Add clear back-to-home navigation treatment in `/workspaces/VoyajApp/web/src/app/about/page.tsx`
+- [X] T017 [US2] Add clear back-to-home navigation treatment in `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
+- [X] T018 [US2] Align typography and spacing rhythm between `/about` and `/privacy` in `/workspaces/VoyajApp/web/src/app/about/page.tsx` and `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
 
 **Checkpoint**: User Stories 1 and 2 both function independently and preserve scaffold mapping.
 
@@ -88,11 +88,11 @@ description: "Task list for Public Page Placeholder Refresh"
 
 ### Implementation for User Story 3
 
-- [ ] T019 [US3] Add consistent visible focus styles for public-page interactive elements in `/workspaces/VoyajApp/web/src/app/globals.css`
-- [ ] T020 [P] [US3] Refine responsive layout behavior for homepage sections in `/workspaces/VoyajApp/web/src/app/page.tsx`
-- [ ] T021 [P] [US3] Refine responsive layout behavior for About page in `/workspaces/VoyajApp/web/src/app/about/page.tsx`
-- [ ] T022 [P] [US3] Refine responsive layout behavior for Privacy page in `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
-- [ ] T023 [US3] Validate keyboard tab order and focus visibility across all public routes in `/workspaces/VoyajApp/specs/001-public-pages-ui/quickstart.md`
+- [X] T019 [US3] Add consistent visible focus styles for public-page interactive elements in `/workspaces/VoyajApp/web/src/app/globals.css`
+- [X] T020 [P] [US3] Refine responsive layout behavior for homepage sections in `/workspaces/VoyajApp/web/src/app/page.tsx`
+- [X] T021 [P] [US3] Refine responsive layout behavior for About page in `/workspaces/VoyajApp/web/src/app/about/page.tsx`
+- [X] T022 [P] [US3] Refine responsive layout behavior for Privacy page in `/workspaces/VoyajApp/web/src/app/privacy/page.tsx`
+- [X] T023 [US3] Validate keyboard tab order and focus visibility across all public routes in `/workspaces/VoyajApp/specs/001-public-pages-ui/quickstart.md`
 
 **Checkpoint**: All user stories satisfy accessibility and responsive acceptance outcomes.
 
@@ -102,9 +102,9 @@ description: "Task list for Public Page Placeholder Refresh"
 
 **Purpose**: Final consistency checks, documentation updates, and release readiness.
 
-- [ ] T024 [P] Update feature quickstart validation notes with final findings in `/workspaces/VoyajApp/specs/001-public-pages-ui/quickstart.md`
-- [ ] T025 Run final lint and capture output notes from `/workspaces/VoyajApp/web` using `npm run lint`
-- [ ] T026 Confirm scaffold route-purpose compliance against `/workspaces/VoyajApp/docs/page-scaffold.md` and update `/workspaces/VoyajApp/specs/001-public-pages-ui/plan.md` if needed
+- [X] T024 [P] Update feature quickstart validation notes with final findings in `/workspaces/VoyajApp/specs/001-public-pages-ui/quickstart.md`
+- [X] T025 Run final lint and capture output notes from `/workspaces/VoyajApp/web` using `npm run lint`
+- [X] T026 Confirm scaffold route-purpose compliance against `/workspaces/VoyajApp/docs/page-scaffold.md` and update `/workspaces/VoyajApp/specs/001-public-pages-ui/plan.md` if needed
 
 ---
 
