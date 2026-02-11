@@ -99,3 +99,10 @@ export default function ExampleCard() {
 ---
 
 Happy designing! ✨
+
+## Active Technologies
+- TypeScript (Next.js App Router project) + Next.js, React, Tailwind CSS, ShadCN UI, lucide-react (001-public-pages-ui)
+- N/A (static placeholder content only) (001-public-pages-ui)
+
+## Recent Changes
+- 001-public-pages-ui: Added TypeScript (Next.js App Router project) + Next.js, React, Tailwind CSS, ShadCN UI, lucide-react
