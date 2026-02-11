@@ -22,7 +22,7 @@ export default function SocialSignInPage() {
       // TODO: Implement social authentication logic
       await new Promise(resolve => setTimeout(resolve, 1000));
       // Redirect or handle success
-    } catch (err) {
+    } catch {
       setError(`Failed to sign in with ${provider}. Please try again.`);
     } finally {
       setIsLoading(null);
@@ -148,7 +148,7 @@ export default function SocialSignInPage() {
 
         <div className="mt-4 text-center">
           <p className="text-sm text-gray-600">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link 
               href="/signup" 
               className="text-blue-600 hover:text-blue-800 font-medium"

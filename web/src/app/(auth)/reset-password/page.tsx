@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -17,20 +17,10 @@ export default function ResetPasswordPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  const [token, setToken] = useState("");
-  const [isValidToken, setIsValidToken] = useState(true);
   
   const searchParams = useSearchParams();
-
-  useEffect(() => {
-    const tokenParam = searchParams.get('token');
-    if (tokenParam) {
-      setToken(tokenParam);
-      // TODO: Validate token with API
-    } else {
-      setIsValidToken(false);
-    }
-  }, [searchParams]);
+  const token = searchParams.get("token");
+  const isValidToken = Boolean(token);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

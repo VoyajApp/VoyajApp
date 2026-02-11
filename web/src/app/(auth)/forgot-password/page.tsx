@@ -49,7 +49,7 @@ export default function ForgotPasswordPage() {
                 />
               </div>
               <p className="text-sm text-gray-500">
-                We'll send you a link to reset your password
+                We&apos;ll send you a link to reset your password
               </p>
             </div>
 
@@ -83,7 +83,7 @@ export default function ForgotPasswordPage() {
 
           <div className="space-y-4">
             <p className="text-sm text-gray-600 text-center">
-              Didn't receive the email? Check your spam folder or try again.
+              Did not receive the email? Check your spam folder or try again.
             </p>
             
             <Button 

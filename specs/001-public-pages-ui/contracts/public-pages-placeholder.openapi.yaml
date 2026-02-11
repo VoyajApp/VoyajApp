@@ -1,0 +1,97 @@
+openapi: 3.0.3
+info:
+  title: Voyaj Public Pages Placeholder Content API
+  version: 0.1.0
+  description: >-
+    Reference contract for future server-provided public page placeholder content.
+    This contract is additive and does not imply implementation in the current UI-only scope.
+servers:
+  - url: https://api.voyajapp.example
+paths:
+  /public/pages:
+    get:
+      summary: List public page payloads
+      description: Returns placeholder payloads for scaffolded public pages.
+      operationId: listPublicPages
+      responses:
+        '200':
+          description: Public pages returned successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [pages]
+                properties:
+                  pages:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/PublicPage'
+  /public/pages/{route}:
+    get:
+      summary: Get a single public page payload
+      operationId: getPublicPage
+      parameters:
+        - name: route
+          in: path
+          required: true
+          description: Encoded public route key
+          schema:
+            type: string
+            enum: [home, about, privacy]
+      responses:
+        '200':
+          description: Public page returned successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicPage'
+        '404':
+          description: Route not found
+components:
+  schemas:
+    PublicPage:
+      type: object
+      required: [route, title, sections, navLinks]
+      properties:
+        route:
+          type: string
+          enum: ['/', '/about', '/privacy']
+        title:
+          type: string
+        description:
+          type: string
+        sections:
+          type: array
+          items:
+            $ref: '#/components/schemas/PublicPageSection'
+        navLinks:
+          type: array
+          items:
+            $ref: '#/components/schemas/PublicNavigationLink'
+    PublicPageSection:
+      type: object
+      required: [id, label, order]
+      properties:
+        id:
+          type: string
+        label:
+          type: string
+        summary:
+          type: string
+        order:
+          type: integer
+          minimum: 1
+    PublicNavigationLink:
+      type: object
+      required: [label, href, sourceRoute, priority]
+      properties:
+        label:
+          type: string
+        href:
+          type: string
+        sourceRoute:
+          type: string
+          enum: ['/', '/about', '/privacy']
+        priority:
+          type: string
+          enum: [primary, secondary]

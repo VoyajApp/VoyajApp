@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -8,39 +8,35 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import AuthLayout from "@/components/auth-layout";
-import { CheckCircle, AlertCircle, Mail, RefreshCw } from "lucide-react";
+import { CheckCircle, Mail, RefreshCw } from "lucide-react";
 
 export default function ActivatePage() {
-  const [verificationCode, setVerificationCode] = useState("");
+  const searchParams = useSearchParams();
+  const initialVerificationCode = searchParams.get("code") ?? "";
+  const [verificationCode, setVerificationCode] = useState(initialVerificationCode);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [isResending, setIsResending] = useState(false);
-  const [email, setEmail] = useState("");
-  const [userRole, setUserRole] = useState<"adventure" | "guide" | null>(null);
-  
-  const searchParams = useSearchParams();
+  const email = searchParams.get("email") ?? "";
+  const userRoleParam = searchParams.get("role");
+  const userRole = userRoleParam === "guide" || userRoleParam === "adventure" ? userRoleParam : null;
 
-  useEffect(() => {
-    const emailParam = searchParams.get('email');
-    const roleParam = searchParams.get('role') as "adventure" | "guide";
-    const codeParam = searchParams.get('code');
-    
-    if (emailParam) setEmail(emailParam);
-    if (roleParam) setUserRole(roleParam);
-    if (codeParam) {
-      setVerificationCode(codeParam);
-      handleAutoActivation(codeParam);
-    }
-  }, [searchParams]);
-
-  const handleAutoActivation = async (code: string) => {
+  const handleAutoActivation = useCallback(async () => {
     setIsLoading(true);
     // TODO: Auto-activate with code from URL
     setTimeout(() => {
       setIsLoading(false);
       setIsSuccess(true);
     }, 1000);
-  };
+  }, []);
+
+  useEffect(() => {
+    if (!initialVerificationCode) return;
+    const timer = setTimeout(() => {
+      void handleAutoActivation();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [initialVerificationCode, handleAutoActivation]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -113,7 +109,7 @@ export default function ActivatePage() {
 
             <div className="space-y-3">
               <p className="text-sm text-gray-600 text-center">
-                Didn't receive the code?
+                Did not receive the code?
               </p>
               
               <Button 
@@ -146,7 +142,7 @@ export default function ActivatePage() {
           <div className="space-y-4">
             <div className="text-center space-y-2">
               <h3 className="text-lg font-semibold text-gray-800">
-                You're all set, {getRoleText()}!
+                You&apos;re all set, {getRoleText()}!
               </h3>
               <p className="text-sm text-gray-600">
                 Start exploring amazing {userRole === "guide" ? "opportunities to share your expertise" : "adventures waiting for you"}.

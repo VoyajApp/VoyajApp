@@ -6,6 +6,21 @@ Welcome, agent! This guide will help you and future agents leverage [ShadCN UI](
 
 ---
 
+### 0. **Scaffold & UX-Doc First Policy (Required)**
+- **Primary planning constraint:** Agents MUST plan and implement against the
+  documented scaffold/UX structure first (currently `docs/page-scaffold.md`).
+- **No silent deviations:** Agents MUST NOT add routes, remove routes, change
+  page purpose, or alter cross-page flows unless explicitly approved by the user.
+- **If conflict is detected:** Stop implementation changes and raise the conflict
+  clearly. Propose options, then wait for user direction before modifying scaffold/UX docs.
+- **Two-step change rule for UX/scaffold shifts:**
+  1. Align current work strictly to existing docs.
+  2. Handle scaffold/UX updates as a separate, explicit task (discussion first).
+- **Traceability requirement:** Plans and implementation notes MUST map each
+  feature step to existing scaffolded pages before introducing functionality.
+
+---
+
 ### 1. **Getting Started with ShadCN UI**
 - Ensure ShadCN is initialized in `/web` (run `npx shadcn@latest init` if not done).
 - Refer to the [official docs](https://ui.shadcn.com/docs) for component usage and customization.
@@ -84,3 +99,10 @@ export default function ExampleCard() {
 ---
 
 Happy designing! ✨
+
+## Active Technologies
+- TypeScript (Next.js App Router project) + Next.js, React, Tailwind CSS, ShadCN UI, lucide-react (001-public-pages-ui)
+- N/A (static placeholder content only) (001-public-pages-ui)
+
+## Recent Changes
+- 001-public-pages-ui: Added TypeScript (Next.js App Router project) + Next.js, React, Tailwind CSS, ShadCN UI, lucide-react
