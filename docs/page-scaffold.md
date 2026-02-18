@@ -68,7 +68,7 @@ No styling. No functionality. No real data.
 
 **Links**
 
-* `/social-signup`
+<!-- * `/social-signup` -->
 * `/signin`
 * `/activate`
 
@@ -85,11 +85,12 @@ No styling. No functionality. No real data.
 
 * `/forgot-password`
 * `/signup`
-* `/social-signin`
+* `/signin`
 
 ---
 
-## 2.3 `/social-signup` — Social Sign Up Page
+<!-- ## 2.3 `/social-signup` — Social Sign Up Page -->
+DEPRECATED: There shouldn't be a separate page for social signup
 
 **Sections**
 
@@ -101,7 +102,8 @@ No styling. No functionality. No real data.
 
 ---
 
-## 2.4 `/social-signin` — Social Sign In Page
+<!-- ## 2.4 `/social-signin` — Social Sign In Page -->
+DEPRECATED: There shouldn't be a separate page for social signin
 
 **Sections**
 
@@ -308,7 +310,7 @@ app/
   signup/
   signin/
   social-signup/
-  social-signin/
+  <!-- social-signin/ -->
   forgot-password/
   reset-password/
   activate/

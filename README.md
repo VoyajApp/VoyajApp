@@ -63,7 +63,7 @@ npm run lint
 - Global shell and theme: [web/src/app/layout.tsx](web/src/app/layout.tsx), [web/src/app/globals.css](web/src/app/globals.css)
 - Landing: [web/src/app/page.tsx](web/src/app/page.tsx)
 - Static pages: [web/src/app/about/page.tsx](web/src/app/about/page.tsx), [web/src/app/privacy/page.tsx](web/src/app/privacy/page.tsx)
-- Auth flows: [web/src/app/(auth)](web/src/app/(auth)) — activate, forgot-password, reset-password, signin, signup, social-signin, social-signup
+- Auth flows: [web/src/app/(auth)](web/src/app/(auth)) — activate, forgot-password, reset-password, signin, signup, --social-signin-- , --social-signup--
 - Adventurer area: [web/src/app/adventure](web/src/app/adventure)
 - Guide area: [web/src/app/guide](web/src/app/guide)
 - Marketplace: [web/src/app/marketplace/page.tsx](web/src/app/marketplace/page.tsx)
