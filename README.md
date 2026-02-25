@@ -28,6 +28,24 @@ This repository currently contains the web frontend (Next.js + Tailwind + ShadCN
 
 See project dependencies in [web/package.json](web/package.json).
 
+## Getting Started (API)
+
+Prerequisites: python3 and uv (uv is installed if you run in codespaces with devcontainer)
+
+1) Install dependencies
+
+```bash
+cd api
+uv sync
+```
+
+2) Run the development server
+
+```bash
+cd api # if not already in api dir
+uv run python manage.py runserver 0.0.0.0:8000
+```
+
 ## Getting Started (Web)
 Prerequisites: a recent Node.js LTS and a package manager (npm/yarn/pnpm). The commands below use npm.
 

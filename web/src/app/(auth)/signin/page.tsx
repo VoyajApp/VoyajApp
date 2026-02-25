@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import AuthLayout from "@/components/auth-layout";
 import { Eye, EyeOff, Mail, Lock } from "lucide-react";
+import { runApiFetch } from "@/modules/api/run-api-fetch";
 
 export default function SignInPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,8 +19,21 @@ export default function SignInPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-    // TODO: Implement sign in logic
-    setTimeout(() => setIsLoading(false), 1000);
+
+    try {
+      const response = await runApiFetch("/auth/signin", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      console.log("Sign in successful:", response);
+    } catch (error) {
+      console.error("Sign in failed:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
